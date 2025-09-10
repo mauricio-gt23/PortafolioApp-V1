@@ -1,0 +1,45 @@
+<div class="container">
+    <h2>CONTACT ME 📩</h2>
+    <form class="form-container" autocomplete="off" method="POST" (ngSubmit)="sendEmail($event)" #miFormulario="ngForm">
+        <div>
+            <label for="email">Email:</label>
+            <br>
+            <input ngModel id="email" name="email_id" type="email" placeholder="Email" required email/>
+            <br>
+            <span *ngIf="miFormulario.controls.email_id?.invalid && miFormulario.controls.email_id?.touched">Write a correct email</span>
+        </div>
+        <div>
+            <label for="subject">Subject:</label>
+            <br>
+            <input ngModel id="subject" name="subject" type="text" placeholder="Subject" required/>
+            <br>
+            <span *ngIf="miFormulario.controls.subject?.invalid && miFormulario.controls.subject?.touched">Write a subject</span>
+        </div>
+        <div>
+            <label for="message">Message:</label>
+            <br>
+            <textarea ngModel name="message" id="message" cols="21" rows="10" placeholder="Message" required></textarea>
+            <br>
+            <span *ngIf="miFormulario.controls.message?.invalid && miFormulario.controls.message?.touched">Write a message</span>
+        </div>
+        <div class="div-btn">
+            <button class="btn" type="submit">Submit</button>
+        </div>
+    </form>
+    <article *ngIf="modalCongrats" class="modal">
+        <div class="modal-container">
+            <button (click)="closeCongrats()" class="modal-close" type="button">X</button>
+            <p class="title">Congratulations 😁</p>
+            <p class="subtitle">The form was sent</p>
+        </div>
+    </article>
+    <article *ngIf="modalError" class="modal">
+        <div class="modal-container">
+            <button (click)="closeError()" class="modal-close" type="button">X</button>
+            <p class="title">Error 😭</p>
+            <p class="subtitle">Please complete all fields</p>
+        </div>
+    </article>
+</div>
+
+

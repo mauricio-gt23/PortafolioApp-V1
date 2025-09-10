@@ -1,0 +1,181 @@
+/* CUERPO */
+.container {
+    padding-bottom: 4vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3vh;
+}
+
+/* TITULO */
+h2 {
+    padding-top: calc(1.04rem + 0.8vw);
+    color: #EAB793;
+    font-family: 'Kanit', sans-serif;
+    font-size: calc(1.05rem + 2.1vh);
+    font-weight: bold;
+    letter-spacing: 0.5vw;
+    line-height: 1.2;
+    text-align: center;
+}
+
+
+/* FORMULARIO */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vh;
+    padding-bottom: 1.5vw;
+}
+
+label {
+    font-family: 'Alata', sans-serif;
+    font-size: calc(1.05rem + 0.25vw);
+    font-weight: bold;
+    color: #C8871C;
+}
+
+input {
+    width: 100%;
+    margin-top: 0.4vh;
+    padding: 0.8rem calc(0.5rem + 1vw);
+    border: 2px solid black;
+    border-radius: 10px;
+    font-size: calc(1.05rem + 0.4vw);
+    font-family: 'Figtree', sans-serif;
+}
+
+textarea {
+    width: 100%;
+    margin-top: 0.4vh;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 0.8rem calc(0.5rem + 1vw);
+    font-size: calc(1.05rem + 0.5vw);
+    font-family: 'Figtree', sans-serif;
+}
+
+span {
+    line-height: 1.2;
+    font-size: calc(0.80rem + 0.2vw);
+    color: red;
+    font-weight: bold;
+    font-family: 'Figtree', sans-serif;
+}
+
+
+.div-btn {
+    text-align: center;
+}
+
+.btn {
+    width: 25vw;
+    padding: 0.8rem calc(0.5rem + 0.4vw);
+    cursor: pointer;
+    background-color: #B3802B;
+    border-radius: 5px;
+    font-family: 'Figtree', sans-serif;
+    font-size: calc(0.80rem + 0.8vw);
+    font-weight: bold;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #EAB793;
+    transition: background-color 500ms ease-in;
+}
+
+/* MODALES */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 997;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0008;
+    opacity: 1;
+}
+
+.modal-container {
+    position: relative;
+    width: 70%;
+    height: 30vh;
+    border: 2px solid #DD9C31;
+    border-radius: 1rem;
+    padding: 2rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    line-height: 1.2;
+}
+
+.modal-close {
+    font-size: calc(0.5rem + 1vw);
+    cursor: pointer;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 25%;
+    background-color: #B3802B;
+    transition: background-color 300ms linear, transform 300ms ease-in-out;
+}
+
+.modal-close:hover {
+    transform: scale(1.2);
+}
+
+.title {
+    color: #EAB793;
+    font-family: 'Kanit', sans-serif;
+    font-size: calc(1.05rem + 1.05vw);
+    font-weight: bold;
+}
+
+.subtitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: calc(0.8rem + 1.05vw);
+    font-weight: bold;
+}
+
+@media screen and (min-width: 30em) {
+    h2 {
+        padding-top: calc(2rem + 1vw);
+        font-size: calc(1.05rem + 2vw);
+        letter-spacing: 0.2vw;
+    }
+}
+
+@media screen and (min-width: 62em) {
+    .container {
+        padding-top: 4vw;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    
+    h2 {
+        padding-top: 0;
+    }
+
+    .modal-container {
+        width: 45%;
+    }
+
+    .modal-close {
+        width: 3.2rem;
+        height: 3.2rem;
+    }
+}

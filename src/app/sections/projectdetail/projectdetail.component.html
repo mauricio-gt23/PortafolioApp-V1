@@ -1,0 +1,15 @@
+<div class="container">
+    <h2 style="text-align: center;" class="title">{{projectDetail.title}}</h2>
+    <img [src]="projectDetail.imageUrl">
+    <div class="container-info">
+        <div class="info">{{projectDetail.content}}</div>
+        <div class="container-extra-info">
+            <h3>Extra Information</h3>
+            <p *ngIf="projectDetail.technology.technology !== ''"><strong>Technologies: </strong> {{projectDetail.technology.technology}}</p>
+            <p *ngIf="projectDetail.technology.backend !== ''"><strong>Backend: </strong> {{projectDetail.technology.backend}}</p>
+            <p *ngIf="projectDetail.technology.frontend !== ''"><strong>FrontEnd: </strong>{{projectDetail.technology.frontend}}</p>
+            <p *ngIf="projectDetail.technology.githubUrl !== ''"><strong>Github URL: </strong><a [href]="projectDetail.technology.githubUrl" target="_blank">{{projectDetail.technology.githubUrl}}</a></p>
+            <p *ngIf="projectDetail.technology.url !== ''"><strong>URL: </strong><a [href]="projectDetail.technology.url" target="_blank">{{projectDetail.technology.url}}</a></p>
+        </div>
+    </div>
+</div>

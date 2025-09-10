@@ -1,0 +1,94 @@
+/* PAGINA */
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* CABECERA */
+.header {
+    width: 100%;
+    height: 10vh;
+}
+
+.header-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+.logo {
+    margin: 0 calc(0.75rem + 0.20vw);
+    margin-top: 2vh;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-size: calc(1.05rem + 0.40vw);
+    text-decoration: none;
+    animation: pulse 1.2s linear infinite alternate;
+}
+.logo::after,
+.logo::before {
+    content: "💻";
+}
+
+
+.menu {
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.menu a {
+    color: #DD9C31;
+    font-family: 'Raleway', sans-serif;
+    font-size: clamp(1.04rem, calc(1.05rem + 0.30vw), 1.35rem);
+    margin: 0 calc(0.75rem + 0.10vw);
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu a:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease-in-out;
+}
+
+/* CUERPO */
+.content {
+    width: 100%;
+    height: 90vh;
+}
+
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 48em) {
+    .header {
+        height: 7vh;
+    }
+
+    .header-container {
+        flex-direction: row;
+        height: 4rem;
+    }
+
+    .logo {
+        margin-top: 0;
+    }
+    .logo::after {
+        content: "";
+    }
+
+    .content {
+        height: 93vh;
+    }
+}
